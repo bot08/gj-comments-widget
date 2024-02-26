@@ -8,11 +8,12 @@ import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import minifyHTML from 'rollup-plugin-minify-html-literals';
 
 export default {
-  input: 'my-element.js',
+  input: 'gj-comments-widget.js',
   output: {
-    file: 'my-element.bundled.js',
+    file: 'gj-comments-widget.bundled.js',
     format: 'esm',
   },
   onwarn(warning) {
@@ -21,12 +22,12 @@ export default {
     }
   },
   plugins: [
-    replace({'Reflect.decorate': 'undefined'}),
+    replace({
+      'Reflect.decorate': 'undefined',
+      preventAssignment: true
+    }),
     resolve(),
-    /**
-     * This minification setup serves the static site generation.
-     * For bundling and minification, check the README.md file.
-     */
+    minifyHTML(),
     terser({
       ecma: 2021,
       module: true,
@@ -39,4 +40,7 @@ export default {
     }),
     summary(),
   ],
+  output: {
+    dir: 'build',
+  },
 };
