@@ -13,7 +13,7 @@ import minifyHTML from 'rollup-plugin-minify-html-literals';
 export default {
   input: 'gj-comments-widget.js',
   output: {
-    file: 'gj-comments-widget.bundled.js',
+    file: 'build/gj-comments-widget.js',
     format: 'iife',
   },
   onwarn(warning) {
@@ -40,7 +40,4 @@ export default {
     }),
     summary(),
   ],
-  output: {
-    dir: 'build',
-  },
 };
