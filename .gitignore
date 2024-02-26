@@ -11,6 +11,10 @@ gj-comments-widget.js
 gj-comments-widget.js.map
 gj-comments-widget.d.ts
 gj-comments-widget.d.ts.map
+icons.js
+icons.js.map
+icons.d.ts
+icons.d.ts.map
 # only generated for size check
 my-element.bundled.js
 gj-comments-widget.bundled.js

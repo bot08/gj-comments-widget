@@ -6,6 +6,7 @@
 
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { spiner } from './icons';
 
 interface Comment {
   avatar_id: number;
@@ -40,6 +41,8 @@ export class CommentList extends LitElement {
       flex: 1;
     }
     .loading {
+      display: flex;
+      justify-content: center;
       font-style: italic;
       color: gray;
     }
@@ -76,7 +79,7 @@ export class CommentList extends LitElement {
       ${
         this.loading
         ? 
-        html`<div class="loading">Loading...</div>`
+        html`<div class="loading">${spiner}</div>`
         : 
         !this.comments 
         ?
