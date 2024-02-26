@@ -14,7 +14,7 @@ export default {
   input: 'gj-comments-widget.js',
   output: {
     file: 'gj-comments-widget.bundled.js',
-    format: 'esm',
+    format: 'iife',
   },
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
@@ -30,7 +30,7 @@ export default {
     minifyHTML(),
     terser({
       ecma: 2021,
-      module: true,
+      module: false,
       warnings: true,
       mangle: {
         properties: {
