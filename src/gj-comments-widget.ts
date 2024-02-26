@@ -51,6 +51,7 @@ export class CommentList extends LitElement {
   @property({ type: Array }) comments: Comment[] = [];
   @property({ type: Boolean }) loading = false;
   @property({ type: String }) branch = '';
+  @property({ type: String }) baseURL = 'sushicat.pp.ua/api/genshin'; // api.genshin-journey.site/.netlify/functions/index  OR  sushicat.pp.ua/api/genshin-ua
 
   override connectedCallback() {
     super.connectedCallback();
@@ -60,7 +61,7 @@ export class CommentList extends LitElement {
   async loadComments() {
     this.loading = true;
     try {
-      const response = await fetch(`https://sushicat.pp.ua/api/genshin/additional/comments/get.php?branch=${this.branch}`);
+      const response = await fetch(`https://${this.baseURL}/additional/comments/get.php?branch=${this.branch}`);
       if (!response.ok) {
         console.warn('Error fetching comments');
       }
