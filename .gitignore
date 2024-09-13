@@ -1,20 +1,8 @@
 /node_modules/
 /lib/
-/test/
 custom-elements.json
-# top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
-gj-comments-widget.js
-gj-comments-widget.js.map
-gj-comments-widget.d.ts
-gj-comments-widget.d.ts.map
-icons.js
-icons.js.map
-icons.d.ts
-icons.d.ts.map
+# TS top level source
+cache
 # only generated for size check
 my-element.bundled.js
 gj-comments-widget.bundled.js

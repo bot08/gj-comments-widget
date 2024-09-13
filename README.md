@@ -17,7 +17,7 @@ To use the GJ Comments Widget in your web application, follow these steps:
 <gj-comments-widget branch="furina"></gj-comments-widget>
 
 <!-- Example 2: Specifying a custom baseURL -->
-<gj-comments-widget branch="diona" baseURL="api.genshin-journey.site/.netlify/functions/index"></gj-comments-widget>
+<gj-comments-widget branch="diona" baseURL="api.genshin-journey.website/.netlify/functions/index"></gj-comments-widget>
 ```
 
 ## More information

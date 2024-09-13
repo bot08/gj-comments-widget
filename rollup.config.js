@@ -11,7 +11,7 @@ import replace from '@rollup/plugin-replace';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 
 export default {
-  input: 'gj-comments-widget.js',
+  input: 'cache/gj-comments-widget.js',
   output: {
     file: 'build/gj-comments-widget.js',
     format: 'iife',
